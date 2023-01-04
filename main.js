@@ -1,42 +1,54 @@
-var puloLinha = "<br><br><br>";
+function pulaLinha() {
+  // pulando duas linhas
+  document.write("<br><hr><br>");
+}
+
+function mostra(frase) {
+  document.write(frase);
+  pulaLinha();
+}
+
+pulaLinha();
+
 var ano = 2023;
 
-document.write("Flávio tem " + (ano - 1977) + " anos");
-document.write("<br>");
-document.write("Joaquim nasceu em " + (ano - 1996) + " anos");
-document.write("<br>");
-document.write("Barney nasceu em " + (ano - 1976) + " anos");
+mostra("Flávio tem " + (ano - 1977) + " anos");
+mostra("Joaquim nasceu em " + (ano - 1996) + " anos");
+
+mostra("Barney nasceu em " + (ano - 1976) + " anos");
 
 var idadeFlavio = 39;
 var idadeJoaquim = 20;
-document.write(puloLinha);
 var idadeBarney = 41;
 var media = (idadeFlavio + idadeJoaquim + idadeBarney) / 3;
-document.write("<br>");
-document.write("<br>");
 
-document.write("A média das idades é " + Math.round(media));
+mostra("A média das idades é " + Math.round(media));
 var nome = "Flávio";
-document.write("<br><br>A idade de " + nome + " é " + idadeFlavio);
-
+mostra("A idade de " + nome + " é " + idadeFlavio);
 var IDADE1 = 10;
 var IDADE2 = 20;
 var IDADE3 = 12;
 
-document.write("<br>A média das idades é ");
-document.write((IDADE1 + IDADE2 + IDADE3) / 3);
-
+mostra("A média das idades é ");
+mostra((IDADE1 + IDADE2 + IDADE3) / 3);
 var tanque = 40;
-
 var caminhoComGasolina = 480;
 var consumoDeGasolina = caminhoComGasolina / tanque;
-
 var caminhoComAlcool = 300;
 var consumoDeAlcool = caminhoComAlcool / tanque;
-document.write("<br>");
 
-document.write("O consumo de Gasolina é " + consumoDeGasolina + " km/L");
+mostra("O consumo de Gasolina é " + consumoDeGasolina + " km/L");
+mostra("O consumo de Álcool é " + consumoDeAlcool + " km/L");
 
-document.write("<br>");
+function pulaLinha() {
+  document.write("<br>");
+}
 
-document.write("O consumo de Álcool é " + consumoDeAlcool + " km/L");
+function mostra(frase) {
+  document.write(frase);
+  pulaLinha();
+}
+var idadeMediaQuandoTemFilhos = 28;
+var anoAtual = 2016;
+var quantidadeDeGeracoes = (anoAtual - 1500) / idadeMediaQuandoTemFilhos;
+mostra(Math.round(quantidadeDeGeracoes));
